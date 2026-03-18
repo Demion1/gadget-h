@@ -565,19 +565,23 @@
                     // Success
                     showMessage('success', 'Login successful! Redirecting to dashboard...');
                     
-                    // Store login state if remember me is checked
+                    // Store login state based on "Remember me" checkbox
                     if (remember) {
-                        localStorage.setItem('adminLoggedIn', 'true');
+                        // Store in localStorage for persistent login
+                        localStorage.setItem('isAdminLoggedIn', 'true');
                         localStorage.setItem('adminEmail', email);
+                        localStorage.setItem('adminName', 'John Doe');
                         localStorage.setItem('loginTime', new Date().toISOString());
                     } else {
-                        sessionStorage.setItem('adminLoggedIn', 'true');
+                        // Store in sessionStorage (clears when browser closes)
+                        sessionStorage.setItem('isAdminLoggedIn', 'true');
                         sessionStorage.setItem('adminEmail', email);
+                        sessionStorage.setItem('adminName', 'John Doe');
                     }
                     
-                    // Redirect to admin dashboard (you can change this URL)
+                    // Redirect to dashboard.html after a short delay
                     setTimeout(() => {
-                        window.location.href = 'admin-dashboard.html'; // Change to your admin dashboard URL
+                        window.location.href = 'dashboard.html';
                     }, 1500);
                 } else {
                     // Error
@@ -604,15 +608,15 @@
 
         // Check if already logged in
         window.onload = function() {
-            const loggedIn = localStorage.getItem('adminLoggedIn') === 'true' || sessionStorage.getItem('adminLoggedIn') === 'true';
+            const loggedIn = localStorage.getItem('isAdminLoggedIn') === 'true' || sessionStorage.getItem('isAdminLoggedIn') === 'true';
             
             if (loggedIn) {
-                // Optional: Show message that user is already logged in
-                showMessage('success', 'You are already logged in. Redirecting...');
+                // Show message that user is already logged in
+                showMessage('success', 'You are already logged in. Redirecting to dashboard...');
                 
                 // Redirect after a short delay
                 setTimeout(() => {
-                    window.location.href = 'admin-dashboard.html'; // Change to your admin dashboard URL
+                    window.location.href = 'dashboard.html';
                 }, 1500);
             }
         }
