@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget HQ | Laptops & Accessories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background-color: #f8fafc; color: #1e293b; min-height: 100vh;">
+    <section class="container" style="max-width: 1200px; margin: 0 auto; padding: 30px 20px;">
+
+        <!-- Header Section with clickable logo -->
+        <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding: 20px 0;">
+            <a href="index.html" style="text-decoration: none;">
+                <div>
+                    <h1 style="font-size: 2.5rem; margin: 0; background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;">
+                        <i class="fas fa-laptop" style="margin-right: 10px;"></i>Gadget HQ
+                    </h1>
+                    <p style="color: #64748b; margin: 8px 0 0 0; font-size: 1.1rem;">Premium Electronics Marketplace</p>
+                </div>
+            </a>
+            <div style="display: flex; gap: 15px;">
+                <button style="background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 10px 20px; font-weight: 600; color: #475569; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-search"></i> Search
+                </button>
+                <button style="background: linear-gradient(90deg, #3b82f6, #8b5cf6); color: white; border: none; border-radius: 10px; padding: 10px 20px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-shopping-cart"></i> Cart (3)
+                </button>
+                <nav style="display: flex; gap: 1.5rem; align-items: center;">
+                    <a href="marketplace.html" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 0; transition: color 0.2s;">Buy</a>
+                    <a href="sell.html" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 0; transition: color 0.2s;">Sell</a>
+                    <a href="swap.html" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 0; transition: color 0.2s;">Swap</a>
+                    <a href="dashboard.html" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 0; transition: color 0.2s;">Dashboard</a>
+                    <a class="btn" href="login.html" style="background-color: #007bff; color: white; padding: 0.5rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; transition: background-color 0.2s;">Login</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Filters Bar -->
+        <div style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
+                <h3 style="margin: 0; font-size: 1.1rem; color: #475569;">Filters:</h3>
+                <select style="padding: 10px 15px; border: 2px solid #e2e8f0; border-radius: 8px; background: white; font-weight: 500; color: #475569; cursor: pointer;">
+                    <option>All Categories</option>
+                    <option>Laptops</option>
+                    <option>Accessories</option>
+                    <option>Gaming</option>
+                    <option>Business</option>
+                </select>
+                <select style="padding: 10px 15px; border: 2px solid #e2e8f0; border-radius: 8px; background: white; font-weight: 500; color: #475569; cursor: pointer;">
+                    <option>All Conditions</option>
+                    <option>New</option>
+                    <option>Fairly Used</option>
+                    <option>Refurbished</option>
+                </select>
+                <select style="padding: 10px 15px; border: 2px solid #e2e8f0; border-radius: 8px; background: white; font-weight: 500; color: #475569; cursor: pointer;">
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Most Popular</option>
+                    <option>Newest First</option>
+                </select>
+                <div style="margin-left: auto; display: flex; align-items: center; gap: 10px; color: #475569;">
+                    <i class="fas fa-filter"></i>
+                    <span>Clear All</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Heading -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+            <div>
+                <h2 style="font-size: 2rem; margin: 0; color: #1e293b; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-laptop" style="color: #3b82f6;"></i>
+                    Available Laptops & Accessories
+                </h2>
+                <p style="color: #64748b; margin: 8px 0 0 0;">Discover premium electronics at competitive prices</p>
+            </div>
+            <div style="color: #475569; font-size: 0.95rem;">
+                <span style="font-weight: 600;">24</span> products available
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;">
+            <!-- Product Card 1 -->
+            <div class="product-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+                <div style="position: relative;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); display: flex; align-items: center; justify-content: center; padding: 20px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2809/2809931.png" alt="HP EliteBook 840" style="max-width: 80%; max-height: 160px; object-fit: contain;">
+                    </div>
+                    <div style="position: absolute; top: 15px; right: 15px; background: #10b981; color: white; font-size: 0.8rem; font-weight: 600; padding: 5px 10px; border-radius: 20px;">
+                        <i class="fas fa-bolt"></i> 20% OFF
+                    </div>
+                    <div style="position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.6); color: white; font-size: 0.8rem; padding: 5px 10px; border-radius: 6px;">
+                        <i class="fas fa-eye"></i> 142
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h4 style="margin: 0; font-size: 1.2rem; color: #1e293b; line-height: 1.4;">HP EliteBook 840 G5</h4>
+                        <i class="far fa-heart" style="color: #cbd5e1; font-size: 1.2rem; cursor: pointer;"></i>
+                    </div>
+                    <p style="color: #64748b; margin: 0 0 12px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-microchip" style="color: #8b5cf6;"></i>
+                        Intel i7 • 16GB RAM • 512GB SSD
+                    </p>
+                    <p style="color: #64748b; margin: 0 0 15px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                        <span style="background: #f1f5f9; padding: 4px 10px; border-radius: 6px; font-weight: 500;">
+                            <i class="fas fa-certificate" style="color: #f59e0b; margin-right: 5px;"></i>Fairly Used
+                        </span>
+                        <span style="display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #fbbf24; margin-right: 3px;"></i> 4.7
+                        </span>
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <div>
+                            <span class="price" style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">₦450,000</span>
+                            <span style="display: block; font-size: 0.9rem; color: #94a3b8; text-decoration: line-through;">₦560,000</span>
+                        </div>
+                        <div style="color: #10b981; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </div>
+                    </div>
+                    <button class="btn-primary" style="width: 100%; background: linear-gradient(90deg, #3b82f6, #8b5cf6); color: white; border: none; border-radius: 10px; padding: 14px; font-weight: 600; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.3s;">
+                        <i class="fas fa-shopping-cart"></i> Buy Now
+                    </button>
+                    <button style="width: 100%; background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 12px; font-weight: 600; color: #475569; cursor: pointer; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <i class="far fa-heart"></i> Add to Wishlist
+                    </button>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+                <div style="position: relative;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); display: flex; align-items: center; justify-content: center; padding: 20px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1791/1791322.png" alt="MacBook Pro" style="max-width: 80%; max-height: 160px; object-fit: contain;">
+                    </div>
+                    <div style="position: absolute; top: 15px; right: 15px; background: #ef4444; color: white; font-size: 0.8rem; font-weight: 600; padding: 5px 10px; border-radius: 20px;">
+                        NEW
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h4 style="margin: 0; font-size: 1.2rem; color: #1e293b; line-height: 1.4;">MacBook Pro M2</h4>
+                        <i class="fas fa-heart" style="color: #ef4444; font-size: 1.2rem; cursor: pointer;"></i>
+                    </div>
+                    <p style="color: #64748b; margin: 0 0 12px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-microchip" style="color: #8b5cf6;"></i>
+                        Apple M2 • 16GB • 1TB SSD
+                    </p>
+                    <p style="color: #64748b; margin: 0 0 15px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                        <span style="background: #f1f5f9; padding: 4px 10px; border-radius: 6px; font-weight: 500;">
+                            <i class="fas fa-certificate" style="color: #10b981; margin-right: 5px;"></i>New
+                        </span>
+                        <span style="display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #fbbf24; margin-right: 3px;"></i> 4.9
+                        </span>
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <div>
+                            <span class="price" style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">₦1,250,000</span>
+                        </div>
+                        <div style="color: #10b981; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </div>
+                    </div>
+                    <button class="btn-primary" style="width: 100%; background: linear-gradient(90deg, #3b82f6, #8b5cf6); color: white; border: none; border-radius: 10px; padding: 14px; font-weight: 600; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.3s;">
+                        <i class="fas fa-shopping-cart"></i> Buy Now
+                    </button>
+                    <button style="width: 100%; background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 12px; font-weight: 600; color: #475569; cursor: pointer; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <i class="fas fa-exchange-alt"></i> Request Swap
+                    </button>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="product-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+                <div style="position: relative;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); display: flex; align-items: center; justify-content: center; padding: 20px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2974/2974344.png" alt="Gaming Laptop" style="max-width: 80%; max-height: 160px; object-fit: contain;">
+                    </div>
+                    <div style="position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.6); color: white; font-size: 0.8rem; padding: 5px 10px; border-radius: 6px;">
+                        <i class="fas fa-bolt"></i> Popular
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h4 style="margin: 0; font-size: 1.2rem; color: #1e293b; line-height: 1.4;">ASUS ROG Zephyrus</h4>
+                        <i class="far fa-heart" style="color: #cbd5e1; font-size: 1.2rem; cursor: pointer;"></i>
+                    </div>
+                    <p style="color: #64748b; margin: 0 0 12px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-microchip" style="color: #8b5cf6;"></i>
+                        RTX 3070 • 32GB RAM • 1TB SSD
+                    </p>
+                    <p style="color: #64748b; margin: 0 0 15px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                        <span style="background: #f1f5f9; padding: 4px 10px; border-radius: 6px; font-weight: 500;">
+                            <i class="fas fa-certificate" style="color: #8b5cf6; margin-right: 5px;"></i>Refurbished
+                        </span>
+                        <span style="display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #fbbf24; margin-right: 3px;"></i> 4.5
+                        </span>
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <div>
+                            <span class="price" style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">₦680,000</span>
+                            <span style="display: block; font-size: 0.9rem; color: #94a3b8; text-decoration: line-through;">₦750,000</span>
+                        </div>
+                        <div style="color: #f59e0b; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fas fa-exclamation-circle"></i> 2 Left
+                        </div>
+                    </div>
+                    <button class="btn-primary" style="width: 100%; background: linear-gradient(90deg, #3b82f6, #8b5cf6); color: white; border: none; border-radius: 10px; padding: 14px; font-weight: 600; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.3s;">
+                        <i class="fas fa-shopping-cart"></i> Buy Now
+                    </button>
+                    <button style="width: 100%; background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 12px; font-weight: 600; color: #475569; cursor: pointer; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <i class="fas fa-eye"></i> View Details
+                    </button>
+                </div>
+            </div>
+            <!-- Product Card 4 (Accessory) -->
+            <div class="product-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s;">
+                <div style="position: relative;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); display: flex; align-items: center; justify-content: center; padding: 20px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2973/2973962.png" alt="Wireless Mouse" style="max-width: 70%; max-height: 160px; object-fit: contain;">
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                        <h4 style="margin: 0; font-size: 1.2rem; color: #1e293b; line-height: 1.4;">Logitech MX Master 3</h4>
+                        <i class="far fa-heart" style="color: #cbd5e1; font-size: 1.2rem; cursor: pointer;"></i>
+                    </div>
+                    <p style="color: #64748b; margin: 0 0 12px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-bluetooth" style="color: #3b82f6;"></i>
+                        Wireless • Ergonomic • Fast Scrolling
+                    </p>
+                    <p style="color: #64748b; margin: 0 0 15px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                        <span style="background: #f1f5f9; padding: 4px 10px; border-radius: 6px; font-weight: 500;">
+                            <i class="fas fa-certificate" style="color: #10b981; margin-right: 5px;"></i>New
+                        </span>
+                        <span style="display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #fbbf24; margin-right: 3px;"></i> 4.8
+                        </span>
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <div>
+                            <span class="price" style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">₦45,000</span>
+                        </div>
+                        <div style="color: #10b981; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </div>
+                    </div>
+                    <button class="btn-primary" style="width: 100%; background: linear-gradient(90deg, #3b82f6, #8b5cf6); color: white; border: none; border-radius: 10px; padding: 14px; font-weight: 600; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.3s;">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                    <button style="width: 100%; background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 12px; font-weight: 600; color: #475569; cursor: pointer; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <i class="fas fa-bolt"></i> Quick Buy
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 50px;">
+            <button style="background: white; border: 2px solid #e2e8f0; border-radius: 8px; padding: 10px 16px; font-weight: 600; color: #475569; cursor: pointer;">
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <button style="background: linear-gradient(90deg, #3b82f6, #8b5cf6); color: white; border: none; border-radius: 8px; padding: 10px 16px; font-weight: 600; cursor: pointer;">1</button>
+            <button style="background: white; border: 2px solid #e2e8f0; border-radius: 8px; padding: 10px 16px; font-weight: 600; color: #475569; cursor: pointer;">2</button>
+            <button style="background: white; border: 2px solid #e2e8f0; border-radius: 8px; padding: 10px 16px; font-weight: 600; color: #475569; cursor: pointer;">3</button>
+            <span style="color: #64748b; padding: 0 10px;">...</span>
+            <button style="background: white; border: 2px solid #e2e8f0; border-radius: 8px; padding: 10px 16px; font-weight: 600; color: #475569; cursor: pointer;">8</button>
+            <button style="background: white; border: 2px solid #e2e8f0; border-radius: 8px; padding: 10px 16px; font-weight: 600; color: #475569; cursor: pointer;">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer style="margin-top: 60px; padding-top: 30px; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <p style="margin: 0; font-weight: 600; color: #1e293b;">Gadget HQ Marketplace</p>
+                    <p style="margin: 5px 0 0 0;">Premium electronics buying & selling platform</p>
+                </div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#" style="color: #3b82f6; text-decoration: none; font-weight: 500;">About</a>
+                    <a href="#" style="color: #3b82f6; text-decoration: none; font-weight: 500;">Contact</a>
+                    <a href="#" style="color: #3b82f6; text-decoration: none; font-weight: 500;">FAQ</a>
+                    <a href="#" style="color: #3b82f6; text-decoration: none; font-weight: 500;">Terms</a>
+                </div>
+            </div>
+            <p style="text-align: center; margin: 30px 0 0 0; color: #94a3b8;">
+                © 2023 Gadget HQ. All rights reserved. <i class="fas fa-shield-alt" style="color: #10b981; margin-left: 10px;"></i> Secure Payments
+            </p>
+        </footer>
+    </section>
+</body>
+</html>

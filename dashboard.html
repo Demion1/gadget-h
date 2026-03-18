@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget HQ Dashboard</title>
+</head>
+<body style="margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background-color: #f5f7fa; color: #333;">
+    <header class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100;">
+        <a href="index.html" style="font-size: 1.5rem; font-weight: bold; color: #333; text-decoration: none;">Gadget HQ</a>
+        <nav style="display: flex; gap: 1.5rem; align-items: center;">
+            <a href="marketplace.html" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 0; transition: color 0.2s;">Buy</a>
+            <a href="sell.html" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 0; transition: color 0.2s;">Sell</a>
+            <a href="swap.html" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 0; transition: color 0.2s;">Swap</a>
+            <a class="btn" href="login.html" style="background-color: #007bff; color: white; padding: 0.5rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; transition: background-color 0.2s;">Login</a>
+        </nav>
+    </header>
+
+    <section class="dashboard" style="display: flex; min-height: 100vh;">
+        <!-- Sidebar -->
+        <aside class="sidebar" style="width: 250px; background: linear-gradient(180deg, #2d3748 0%, #1a202c 100%); color: white; padding: 30px 0; box-shadow: 3px 0 15px rgba(0,0,0,0.1);">
+            <div style="padding: 0 25px 30px; border-bottom: 1px solid #4a5568;">
+                <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 1.5rem;">
+                    <span style="color: #4299e1;">Gadget</span>HQ
+                </h2>
+                <p style="font-size: 0.9rem; color: #cbd5e0; margin: 5px 0 0;">Dashboard</p>
+            </div>
+            <nav style="margin-top: 30px;">
+                <a href="#" style="display: flex; align-items: center; gap: 12px; color: #e2e8f0; text-decoration: none; padding: 15px 25px; transition: all 0.3s; border-left: 4px solid transparent;">
+                    <span style="background-color: #4299e1; padding: 6px; border-radius: 6px;">📦</span>
+                    <span style="font-weight: 500;">My Orders</span>
+                </a>
+                <a href="#" style="display: flex; align-items: center; gap: 12px; color: #e2e8f0; text-decoration: none; padding: 15px 25px; transition: all 0.3s; border-left: 4px solid transparent;">
+                    <span style="background-color: #48bb78; padding: 6px; border-radius: 6px;">📋</span>
+                    <span style="font-weight: 500;">My Listings</span>
+                </a>
+                <a href="#" style="display: flex; align-items: center; gap: 12px; color: #e2e8f0; text-decoration: none; padding: 15px 25px; transition: all 0.3s; border-left: 4px solid transparent;">
+                    <span style="background-color: #ed8936; padding: 6px; border-radius: 6px;">🔄</span>
+                    <span style="font-weight: 500;">Swap Requests</span>
+                </a>
+                <a href="#" style="display: flex; align-items: center; gap: 12px; color: #e2e8f0; text-decoration: none; padding: 15px 25px; transition: all 0.3s; border-left: 4px solid transparent;">
+                    <span style="background-color: #9f7aea; padding: 6px; border-radius: 6px;">⭐</span>
+                    <span style="font-weight: 500;">Reviews</span>
+                </a>
+            </nav>
+            <div style="position: absolute; bottom: 30px; left: 25px; right: 25px; padding-top: 20px; border-top: 1px solid #4a5568;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #4299e1; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">JD</div>
+                    <div>
+                        <p style="margin: 0; font-weight: 500;">John Doe</p>
+                        <p style="margin: 0; font-size: 0.85rem; color: #cbd5e0;">john@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content" style="flex: 1; padding: 40px; overflow-y: auto;">
+            <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+                <div>
+                    <h2 style="font-size: 2rem; margin: 0 0 10px; color: #2d3748;">Welcome Back 👋</h2>
+                    <p style="color: #718096; font-size: 1.1rem; margin: 0;">Manage your activities on Gadget HQ</p>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <button style="background-color: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 15px; display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 500; color: #4a5568;">
+                        🔔 Notifications
+                        <span style="background-color: #f56565; color: white; border-radius: 50%; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem;">3</span>
+                    </button>
+                    <button style="background-color: #4299e1; color: white; border: none; border-radius: 8px; padding: 12px 24px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                        ➕ New Listing
+                    </button>
+                    <!-- Logout button -->
+                    <button onclick="logout()" style="background-color: #f56565; color: white; border: none; border-radius: 8px; padding: 12px 24px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                        🚪 Logout
+                    </button>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; margin-bottom: 40px;">
+                <div style="background-color: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <p style="color: #718096; margin: 0 0 8px; font-size: 0.95rem;">Active Orders</p>
+                            <h3 style="font-size: 2rem; margin: 0; color: #2d3748;">12</h3>
+                        </div>
+                        <div style="background-color: #ebf8ff; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #4299e1; font-size: 1.5rem;">📦</div>
+                    </div>
+                    <p style="color: #48bb78; margin: 10px 0 0; font-size: 0.9rem; font-weight: 500;">↑ 2 from last week</p>
+                </div>
+                <div style="background-color: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <p style="color: #718096; margin: 0 0 8px; font-size: 0.95rem;">Listed Items</p>
+                            <h3 style="font-size: 2rem; margin: 0; color: #2d3748;">8</h3>
+                        </div>
+                        <div style="background-color: #f0fff4; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #48bb78; font-size: 1.5rem;">📋</div>
+                    </div>
+                    <p style="color: #48bb78; margin: 10px 0 0; font-size: 0.9rem; font-weight: 500;">↑ 1 from last week</p>
+                </div>
+                <div style="background-color: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <p style="color: #718096; margin: 0 0 8px; font-size: 0.95rem;">Swap Requests</p>
+                            <h3 style="font-size: 2rem; margin: 0; color: #2d3748;">5</h3>
+                        </div>
+                        <div style="background-color: #fffaf0; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #ed8936; font-size: 1.5rem;">🔄</div>
+                    </div>
+                    <p style="color: #f56565; margin: 10px 0 0; font-size: 0.9rem; font-weight: 500;">↓ 1 from last week</p>
+                </div>
+                <div style="background-color: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <p style="color: #718096; margin: 0 0 8px; font-size: 0.95rem;">Avg. Rating</p>
+                            <h3 style="font-size: 2rem; margin: 0; color: #2d3748;">4.8</h3>
+                        </div>
+                        <div style="background-color: #faf5ff; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #9f7aea; font-size: 1.5rem;">⭐</div>
+                    </div>
+                    <p style="color: #48bb78; margin: 10px 0 0; font-size: 0.9rem; font-weight: 500;">↑ 0.2 from last week</p>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div style="background-color: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <h3 style="margin: 0 0 25px; color: #2d3748; font-size: 1.3rem;">Recent Activity</h3>
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: flex; align-items: center; gap: 15px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0;">
+                        <div style="background-color: #ebf8ff; width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #4299e1; font-size: 1.2rem;">📦</div>
+                        <div style="flex: 1;">
+                            <p style="margin: 0 0 5px; font-weight: 500;">New order received</p>
+                            <p style="margin: 0; color: #718096; font-size: 0.9rem;">iPhone 12 Pro • 2 hours ago</p>
+                        </div>
+                        <span style="background-color: #c6f6d5; color: #22543d; padding: 5px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Completed</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0;">
+                        <div style="background-color: #f0fff4; width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #48bb78; font-size: 1.2rem;">📋</div>
+                        <div style="flex: 1;">
+                            <p style="margin: 0 0 5px; font-weight: 500;">Listing published</p>
+                            <p style="margin: 0; color: #718096; font-size: 0.9rem;">MacBook Air M1 • 1 day ago</p>
+                        </div>
+                        <span style="background-color: #bee3f8; color: #2a4365; padding: 5px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Active</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="background-color: #fffaf0; width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #ed8936; font-size: 1.2rem;">🔄</div>
+                        <div style="flex: 1;">
+                            <p style="margin: 0 0 5px; font-weight: 500;">Swap request approved</p>
+                            <p style="margin: 0; color: #718096; font-size: 0.9rem;">AirPods Pro for Galaxy Buds • 3 days ago</p>
+                        </div>
+                        <span style="background-color: #fed7d7; color: #742a2a; padding: 5px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Pending</span>
+                    </div>
+                </div>
+            </div>
+
+            <footer style="margin-top: 40px; text-align: center; color: #a0aec0; font-size: 0.9rem; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+                <p>© 2026 Gadget HQ. All rights reserved. | <a href="#" style="color: #4299e1; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #4299e1; text-decoration: none;">Terms of Service</a></p>
+            </footer>
+        </main>
+    </section>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('isAdminLoggedIn');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

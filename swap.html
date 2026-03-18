@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Swap | Gadget HQ</title>
+</head>
+<body style="margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px;">
+
+    <section class="form-container" style="background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); padding: 40px; width: 100%; max-width: 500px; position: relative; overflow: hidden;">
+
+        <!-- Decorative elements -->
+        <div style="position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; opacity: 0.1;"></div>
+        <div style="position: absolute; bottom: -60px; left: -60px; width: 150px; height: 150px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; opacity: 0.1;"></div>
+
+        <!-- Logo linking to index.html -->
+        <a href="index.html" style="text-decoration: none; display: block; text-align: center; margin-bottom: 20px;">
+            <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.9); padding: 8px 20px; border-radius: 50px;">
+                <span style="font-size: 24px;">🔄</span>
+                <span style="font-size: 20px; font-weight: 700; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Gadget HQ</span>
+            </div>
+        </a>
+
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 30px; position: relative;">
+            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 28px; box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);">
+                🔄
+            </div>
+            <h2 style="margin: 0 0 10px 0; color: #2d3748; font-size: 28px; font-weight: 700;">Request a Swap</h2>
+            <p style="color: #718096; margin: 0; font-size: 16px; line-height: 1.5;">Trade your gadget for something you want more</p>
+        </div>
+
+        <!-- Swap Visualization -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 30px; padding: 20px; background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f4 100%); border-radius: 15px; position: relative;">
+            <div style="text-align: center; flex: 1;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white; font-size: 24px;">📱</div>
+                <p style="margin: 0; color: #4a5568; font-weight: 600; font-size: 14px;">Your Gadget</p>
+                <div style="width: 100%; height: 3px; background: linear-gradient(to right, #4facfe, #00f2fe); margin: 8px 0;"></div>
+            </div>
+            <div style="text-align: center;">
+                <div style="width: 50px; height: 50px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #f5576c; font-size: 20px; border: 2px solid #f5576c; box-shadow: 0 0 0 4px white;">➔</div>
+                <p style="margin: 8px 0 0; color: #718096; font-size: 12px; font-weight: 600;">SWAP</p>
+            </div>
+            <div style="text-align: center; flex: 1;">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white; font-size: 24px;">💻</div>
+                <p style="margin: 0; color: #4a5568; font-weight: 600; font-size: 14px;">Desired Gadget</p>
+                <div style="width: 100%; height: 3px; background: linear-gradient(to right, #43e97b, #38f9d7); margin: 8px 0;"></div>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <form style="display: flex; flex-direction: column; gap: 25px; position: relative;">
+            <!-- Your Gadget -->
+            <div>
+                <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <label style="color: #4a5568; font-weight: 600; font-size: 14px; flex: 1;">Your Gadget *</label>
+                    <div style="font-size: 12px; color: #718096; background: #f8f9fa; padding: 4px 10px; border-radius: 12px;"><span id="yourGadgetValue">?</span> estimated value</div>
+                </div>
+                <div style="position: relative;">
+                    <input type="text" placeholder="e.g., iPhone 12 Pro 128GB (Good Condition)" style="width: 100%; padding: 16px 16px 16px 52px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; background-color: #f8fafc; color: #2d3748;" onfocus="this.style.borderColor='#4facfe'; this.style.boxShadow='0 0 0 3px rgba(79, 172, 254, 0.1)'; this.style.backgroundColor='white';" onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'; this.style.backgroundColor='#f8fafc';" oninput="updateGadgetValue(this.value, 'yourGadgetValue')">
+                    <div style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #4facfe; font-size: 22px; background: rgba(79, 172, 254, 0.1); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">📱</div>
+                </div>
+                <p style="color: #718096; font-size: 13px; margin: 8px 0 0 12px;">Be specific about model, storage, and condition</p>
+            </div>
+
+            <!-- Desired Gadget -->
+            <div>
+                <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <label style="color: #4a5568; font-weight: 600; font-size: 14px; flex: 1;">Desired Gadget *</label>
+                    <div style="font-size: 12px; color: #718096; background: #f8f9fa; padding: 4px 10px; border-radius: 12px;"><span id="desiredGadgetValue">?</span> estimated value</div>
+                </div>
+                <div style="position: relative;">
+                    <input type="text" placeholder="e.g., Samsung Galaxy S21 Ultra 256GB" style="width: 100%; padding: 16px 16px 16px 52px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; background-color: #f8fafc; color: #2d3748;" onfocus="this.style.borderColor='#43e97b'; this.style.boxShadow='0 0 0 3px rgba(67, 233, 123, 0.1)'; this.style.backgroundColor='white';" onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'; this.style.backgroundColor='#f8fafc';" oninput="updateGadgetValue(this.value, 'desiredGadgetValue')">
+                    <div style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #43e97b; font-size: 22px; background: rgba(67, 233, 123, 0.1); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">💻</div>
+                </div>
+                <p style="color: #718096; font-size: 13px; margin: 8px 0 0 12px;">What would you like to trade for?</p>
+            </div>
+
+            <!-- Price Difference -->
+            <div>
+                <label style="display: block; color: #4a5568; font-weight: 600; margin-bottom: 8px; font-size: 14px;">Price Difference (₦) *</label>
+                <div style="position: relative;">
+                    <input type="number" placeholder="e.g., 15000" min="0" step="1000" style="width: 100%; padding: 16px 16px 16px 52px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; background-color: #f8fafc; color: #2d3748;" onfocus="this.style.borderColor='#f093fb'; this.style.boxShadow='0 0 0 3px rgba(240, 147, 251, 0.1)'; this.style.backgroundColor='white';" onblur="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'; this.style.backgroundColor='#f8fafc';" oninput="updateDifferenceInfo(this.value)">
+                    <div style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #f093fb; font-size: 22px; background: rgba(240, 147, 251, 0.1); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">💰</div>
+                    <div style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: #4a5568; font-weight: 600;">NGN</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-top: 8px;">
+                    <div id="differenceInfo" style="color: #718096; font-size: 13px; flex: 1;">Enter the estimated cash difference between gadgets</div>
+                    <div id="differenceStatus" style="font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 12px; background: #f8f9fa; color: #718096;">No difference</div>
+                </div>
+            </div>
+
+            <!-- Swap Summary -->
+            <div id="swapSummary" style="background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f4 100%); border-radius: 15px; padding: 20px; margin-top: 10px; display: none;">
+                <h4 style="margin: 0 0 15px 0; color: #4a5568; font-size: 16px; display: flex; align-items: center; gap: 8px;">📊 Swap Summary</h4>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;"><span style="color: #718096; font-size: 14px;">Your Gadget Value:</span><span style="color: #4a5568; font-weight: 600; font-size: 14px;">₦<span id="summaryYourValue">0</span></span></div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;"><span style="color: #718096; font-size: 14px;">Desired Gadget Value:</span><span style="color: #4a5568; font-weight: 600; font-size: 14px;">₦<span id="summaryDesiredValue">0</span></span></div>
+                <div style="height: 1px; background: #e2e8f0; margin: 15px 0;"></div>
+                <div style="display: flex; justify-content: space-between;"><span style="color: #2d3748; font-weight: 700; font-size: 15px;">You will <span id="summaryAction">receive</span>:</span><span id="summaryDifference" style="color: #f5576c; font-weight: 700; font-size: 18px;">₦0</span></div>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="btn-primary" type="button" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none; border-radius: 12px; padding: 18px 24px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 10px; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(245, 87, 108, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(245, 87, 108, 0.4)';" onclick="submitSwapRequest()">
+                🔄 Submit Swap Request
+            </button>
+
+            <!-- Terms note -->
+            <p style="color: #a0aec0; font-size: 13px; text-align: center; margin: 15px 0 0 0;">
+                Swap requests are binding for 7 days • 
+                <a href="#" style="color: #f5576c; text-decoration: none; font-weight: 600;">Learn more</a>
+            </p>
+        </form>
+
+        <!-- Success Modal -->
+        <div id="successModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 100; align-items: center; justify-content: center; padding: 20px;">
+            <div style="background: white; border-radius: 20px; padding: 40px; max-width: 400px; text-align: center; position: relative;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 36px;">✅</div>
+                <h3 style="margin: 0 0 15px 0; color: #2d3748; font-size: 24px;">Swap Request Sent!</h3>
+                <p style="color: #718096; margin: 0 0 25px 0; line-height: 1.5;">Your swap request has been submitted successfully. We'll notify you when we find a match.</p>
+                <button onclick="document.getElementById('successModal').style.display='none';" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none; border-radius: 10px; padding: 12px 30px; font-weight: 600; cursor: pointer;">Got it!</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Placeholder functions for the swap page (if any)
+        function updateGadgetValue(val, id) { document.getElementById(id).innerText = val ? '₦' + val.length*1000 : '?'; }
+        function updateDifferenceInfo(val) { 
+            let status = document.getElementById('differenceStatus');
+            if(val > 0) status.innerHTML = 'You pay extra'; else if(val < 0) status.innerHTML = 'You receive extra'; else status.innerHTML = 'No difference';
+        }
+        function submitSwapRequest() {
+            document.getElementById('successModal').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
